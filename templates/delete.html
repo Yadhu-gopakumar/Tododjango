@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container"
+    style="font-size: 25px; display:grid;place-items:center;color: rgb(56, 37, 3);letter-spacing: 2px;font-weight: bold;">
+    <p class="my-5"> delete the task: '{{tasks.name}}?</p>
+    <div action="" method="post" class="container my-5 mb-5">
+        <div class="row ">
+            <div class="col-md-6 mb-4  d-flex align-items-center justify-content-center ">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-danger" style="width: 150px ;border-radius:10px;">delete</button>
+                </form>
+            </div>
+            <div class="col-md-6   d-flex align-items-center justify-content-center mb-4">
+                <a href="{% url 'add' %}"><button type="disabled" class="btn-success"
+                        style="width: 150px;border-radius:10px;">Home</button></a>
+            </div>
+        </div>
+    </DIV>
+</div>
+
+{% endblock %}
